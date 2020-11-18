@@ -522,27 +522,27 @@ class TestMaxHeap(unittest.TestCase):
         self.assertTrue(h._obeys_heap_property_at_index(1))
         self.assertTrue(h._obeys_heap_property_at_index(2))
 
-    # def test_heap_property_three_obey(self):
-    #     """
-    #     A heap with three elements, with a parent value greater than its left
-    #     child's value and its right child's value obeys the max-heap property.
-    #     Hint: Refine your logic. What are the possible states? No children,
-    #     a left child, or both a left and right child.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(10)
-    #     h._data.append(5)
-    #     h._data.append(1)
-    #     self.assertTrue(h._obeys_heap_property_at_index(0))
-    #     self.assertTrue(h._obeys_heap_property_at_index(1))
-    #     self.assertTrue(h._obeys_heap_property_at_index(2))
-    #     h._data = []
-    #     h._data.append(10)
-    #     h._data.append(1)
-    #     h._data.append(5)
-    #     self.assertTrue(h._obeys_heap_property_at_index(0))
-    #     self.assertTrue(h._obeys_heap_property_at_index(1))
-    #     self.assertTrue(h._obeys_heap_property_at_index(2))
+    def test_heap_property_three_obey(self):
+        """
+        A heap with three elements, with a parent value greater than its left
+        child's value and its right child's value obeys the max-heap property.
+        Hint: Refine your logic. What are the possible states? No children,
+        a left child, or both a left and right child.
+        """
+        h = MaxHeap()
+        h._data.append(10)
+        h._data.append(5)
+        h._data.append(1)
+        self.assertTrue(h._obeys_heap_property_at_index(0))
+        self.assertTrue(h._obeys_heap_property_at_index(1))
+        self.assertTrue(h._obeys_heap_property_at_index(2))
+        h._data = []
+        h._data.append(10)
+        h._data.append(1)
+        h._data.append(5)
+        self.assertTrue(h._obeys_heap_property_at_index(0))
+        self.assertTrue(h._obeys_heap_property_at_index(1))
+        self.assertTrue(h._obeys_heap_property_at_index(2))
 
     """
     Swap. Given the indexes of two items, swap their positions in the data list.
