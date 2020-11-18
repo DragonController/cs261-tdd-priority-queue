@@ -26,13 +26,13 @@ class TestMaxHeap(unittest.TestCase):
     A heap stores its data in an array, such as a Python list.
     """
 
-    # def test_internal_data(self):
-    #     """
-    #     A MaxHeap uses an array (a dynamic array / Python list) to store its data.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertEqual(list, type(h._data))
-    #     self.assertEqual(0, len(h._data))
+    def test_internal_data(self):
+        """
+        A MaxHeap uses an array (a dynamic array / Python list) to store its data.
+        """
+        h = MaxHeap()
+        self.assertEqual(list, type(h._data))
+        self.assertEqual(0, len(h._data))
 
     """
     Size is the number of items in the heap.
