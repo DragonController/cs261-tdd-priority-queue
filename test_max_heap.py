@@ -113,14 +113,14 @@ class TestMaxHeap(unittest.TestCase):
         h._data.append('fake')
         self.assertEqual(0, h._last_index())
 
-    # def test_last_index_two(self):
-    #     """
-    #     The last index of a heap with two elements is 1.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     self.assertEqual(1, h._last_index())
+    def test_last_index_two(self):
+        """
+        The last index of a heap with two elements is 1.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        h._data.append('fake')
+        self.assertEqual(1, h._last_index())
 
     # def test_last_index_42(self):
     #     """
