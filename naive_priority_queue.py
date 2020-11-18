@@ -4,4 +4,5 @@
 
 class NaivePriorityQueue:
 
-    pass
+    def __init__(self):
+        self.data = []

@@ -21,12 +21,12 @@ class TestNaivePriorityQueue(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate NaivePriorityQueue.")
 
-    # def test_internal(self):
-    #     """
-    #     A NaivePriorityQueue uses a list to store its data.
-    #     """
-    #     pq = NaivePriorityQueue()
-    #     self.assertEqual(list, type(pq.data))
+    def test_internal(self):
+        """
+        A NaivePriorityQueue uses a list to store its data.
+        """
+        pq = NaivePriorityQueue()
+        self.assertEqual(list, type(pq.data))
 
     # def test_enqueue_one_internal(self):
     #     """
