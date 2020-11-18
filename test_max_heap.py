@@ -136,14 +136,14 @@ class TestMaxHeap(unittest.TestCase):
     encapsulate this work into a method.
     """
 
-    # def test_value_at_zero(self):
-    #     """
-    #     The value at index 0 is the value of the 0th item in the heap's data list.
-    #     """
-    #     h = MaxHeap()
-    #     value = fake_value()
-    #     h._data.append(value)
-    #     self.assertEqual(value, h._value_at(0))
+    def test_value_at_zero(self):
+        """
+        The value at index 0 is the value of the 0th item in the heap's data list.
+        """
+        h = MaxHeap()
+        value = fake_value()
+        h._data.append(value)
+        self.assertEqual(value, h._value_at(0))
 
     # def test_value_at(self):
     #     """
