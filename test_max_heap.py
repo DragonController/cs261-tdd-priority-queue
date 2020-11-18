@@ -468,13 +468,13 @@ class TestMaxHeap(unittest.TestCase):
     at that index and the values of the immediate children at that index.
     """
 
-    # def test_heap_property_one(self):
-    #     """
-    #     A heap with one element obeys the max-heap property.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     self.assertTrue(h._obeys_heap_property_at_index(0))
+    def test_heap_property_one(self):
+        """
+        A heap with one element obeys the max-heap property.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        self.assertTrue(h._obeys_heap_property_at_index(0))
 
     # def test_heap_property_two_violate(self):
     #     """
