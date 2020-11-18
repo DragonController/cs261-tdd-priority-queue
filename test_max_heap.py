@@ -145,21 +145,21 @@ class TestMaxHeap(unittest.TestCase):
         h._data.append(value)
         self.assertEqual(value, h._value_at(0))
 
-    # def test_value_at(self):
-    #     """
-    #     The value at index i is the value of the i'th item in the heap's data list.
-    #     """
-    #     h = MaxHeap()
-    #     value = fake_value()
-    #     h._data.append(value)
-    #     self.assertEqual(value, h._value_at(0))
-    #     value = fake_value()
-    #     h._data.append(value)
-    #     self.assertEqual(value, h._value_at(1))
-    #     for i in range(2, 9):
-    #         value = fake_value()
-    #         h._data.append(value)
-    #         self.assertEqual(value, h._value_at(i))
+    def test_value_at(self):
+        """
+        The value at index i is the value of the i'th item in the heap's data list.
+        """
+        h = MaxHeap()
+        value = fake_value()
+        h._data.append(value)
+        self.assertEqual(value, h._value_at(0))
+        value = fake_value()
+        h._data.append(value)
+        self.assertEqual(value, h._value_at(1))
+        for i in range(2, 9):
+            value = fake_value()
+            h._data.append(value)
+            self.assertEqual(value, h._value_at(i))
 
     # def test_value_at_invalid_index(self):
     #     """
