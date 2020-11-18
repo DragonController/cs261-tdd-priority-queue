@@ -58,4 +58,6 @@ class MaxHeap:
       return None
 
    def _obeys_heap_property_at_index(self, index):
+      if self._has_left_child(index):
+         return self._value_at(index) >= self._left_child(index)
       return True
