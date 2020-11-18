@@ -27,3 +27,6 @@ class MaxHeap:
 
    def _right_child_index(self, index):
       return 2 * index + 2
+
+   def _parent_index(self, index):
+      return round(index / 2 - 0.6)
