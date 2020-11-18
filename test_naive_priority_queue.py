@@ -37,18 +37,18 @@ class TestNaivePriorityQueue(unittest.TestCase):
         pq.enqueue(j)
         self.assertEqual(j, pq.data[0])
 
-    # def test_enqueue_two_internal(self):
-    #     """
-    #     Enqueueing two values results in the first enqueued value being the first
-    #     one in the list, and the second value being the last one in the list.
-    #     """
-    #     pq = NaivePriorityQueue()
-    #     first = Job(5, 'new')
-    #     second = Job(6, 'moon')
-    #     pq.enqueue(first)
-    #     pq.enqueue(second)
-    #     self.assertEqual(first, pq.data[0])
-    #     self.assertEqual(second, pq.data[1])
+    def test_enqueue_two_internal(self):
+        """
+        Enqueueing two values results in the first enqueued value being the first
+        one in the list, and the second value being the last one in the list.
+        """
+        pq = NaivePriorityQueue()
+        first = Job(5, 'new')
+        second = Job(6, 'moon')
+        pq.enqueue(first)
+        pq.enqueue(second)
+        self.assertEqual(first, pq.data[0])
+        self.assertEqual(second, pq.data[1])
 
     # def test_enqueue_three_internal(self):
     #     """
