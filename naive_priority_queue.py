@@ -11,4 +11,6 @@ class NaivePriorityQueue:
         self.data.append(value)
 
     def dequeue(self):
-        return self.data[0]
+        element = self.data[0]
+        self.data.remove(element)
+        return element

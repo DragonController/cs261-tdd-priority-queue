@@ -75,16 +75,16 @@ class TestNaivePriorityQueue(unittest.TestCase):
         pq.enqueue(j)
         self.assertEqual(j, pq.dequeue())
 
-    # def test_dequeue_one_internal(self):
-    #     """
-    #     Dequeuing from a single-element queue removes it from the internal list.
-    #     """
-    #     pq = NaivePriorityQueue()
-    #     job = Job(5, 'crown')
-    #     pq.enqueue(job)
-    #     self.assertEqual(1, len(pq.data))
-    #     _ = pq.dequeue()
-    #     self.assertEqual(0, len(pq.data))
+    def test_dequeue_one_internal(self):
+        """
+        Dequeuing from a single-element queue removes it from the internal list.
+        """
+        pq = NaivePriorityQueue()
+        job = Job(5, 'crown')
+        pq.enqueue(job)
+        self.assertEqual(1, len(pq.data))
+        _ = pq.dequeue()
+        self.assertEqual(0, len(pq.data))
 
     # # Hint: NaivePriorityQueues perform a linear search. Don't optimize.
 
