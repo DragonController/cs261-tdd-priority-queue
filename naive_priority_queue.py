@@ -12,5 +12,8 @@ class NaivePriorityQueue:
 
     def dequeue(self):
         element = self.data[0]
+        for current_element in self.data:
+            if current_element.priority > element.priority:
+                element = current_element
         self.data.remove(element)
         return element
