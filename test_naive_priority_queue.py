@@ -99,19 +99,19 @@ class TestNaivePriorityQueue(unittest.TestCase):
         pq.enqueue(lower_priority)
         self.assertEqual(higher_priority, pq.dequeue())
 
-    # def test_dequeue_two_internal(self):
-    #     """
-    #     Dequeuing from a two-element queue removes the job with the highest
-    #     priority from the list.
-    #     """
-    #     pq = NaivePriorityQueue()
-    #     lower_priority = Job(1, 'metropolis')
-    #     higher_priority = Job(3, 'shining')
-    #     pq.enqueue(higher_priority)
-    #     pq.enqueue(lower_priority)
-    #     _ = pq.dequeue()
-    #     self.assertEqual(lower_priority, pq.data[0])
-    #     self.assertEqual(1, len(pq.data))
+    def test_dequeue_two_internal(self):
+        """
+        Dequeuing from a two-element queue removes the job with the highest
+        priority from the list.
+        """
+        pq = NaivePriorityQueue()
+        lower_priority = Job(1, 'metropolis')
+        higher_priority = Job(3, 'shining')
+        pq.enqueue(higher_priority)
+        pq.enqueue(lower_priority)
+        _ = pq.dequeue()
+        self.assertEqual(lower_priority, pq.data[0])
+        self.assertEqual(1, len(pq.data))
 
     # def test_dequeue_three(self):
     #     """
