@@ -17,3 +17,6 @@ class NaivePriorityQueue:
                 element = current_element
         self.data.remove(element)
         return element
+
+    def is_empty(self):
+        return len(self.data) == 0

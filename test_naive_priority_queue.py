@@ -150,12 +150,12 @@ class TestNaivePriorityQueue(unittest.TestCase):
     Emptiness
     """
 
-    # def test_empty(self):
-    #     """
-    #     A queue is initially empty.
-    #     """
-    #     pq = NaivePriorityQueue()
-    #     self.assertTrue(pq.is_empty())
+    def test_empty(self):
+        """
+        A queue is initially empty.
+        """
+        pq = NaivePriorityQueue()
+        self.assertTrue(pq.is_empty())
 
     # def test_not_empty(self):
     #     """
