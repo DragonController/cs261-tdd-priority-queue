@@ -38,12 +38,12 @@ class TestMaxHeap(unittest.TestCase):
     Size is the number of items in the heap.
     """
 
-    # def test_size_initial(self):
-    #     """
-    #     The _size() of a new heap is 0.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertEqual(0, h._size())
+    def test_size_initial(self):
+        """
+        The _size() of a new heap is 0.
+        """
+        h = MaxHeap()
+        self.assertEqual(0, h._size())
 
     # def test_size_data(self):
     #     """
