@@ -489,16 +489,16 @@ class TestMaxHeap(unittest.TestCase):
         # No children at 1, so it obeys here:
         self.assertTrue(h._obeys_heap_property_at_index(1))
 
-    # def test_heap_property_two_obey(self):
-    #     """
-    #     A heap with two elements, with a parent value greater than its left
-    #     child's value obeys the max-heap property.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(10)
-    #     h._data.append(5)
-    #     self.assertTrue(h._obeys_heap_property_at_index(0))
-    #     self.assertTrue(h._obeys_heap_property_at_index(1))
+    def test_heap_property_two_obey(self):
+        """
+        A heap with two elements, with a parent value greater than its left
+        child's value obeys the max-heap property.
+        """
+        h = MaxHeap()
+        h._data.append(10)
+        h._data.append(5)
+        self.assertTrue(h._obeys_heap_property_at_index(0))
+        self.assertTrue(h._obeys_heap_property_at_index(1))
 
     # def test_heap_property_three_violate(self):
     #     """
