@@ -12,3 +12,8 @@ class Job:
         if not isinstance(other, Job):
             return NotImplemented
         return self.priority == other.priority
+
+    def __lt__(self, other):
+        if not isinstance(other, Job):
+            return NotImplemented
+        return self.priority < other.priority
