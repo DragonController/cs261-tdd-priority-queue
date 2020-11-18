@@ -258,22 +258,22 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(fake_left_child, h._parent(3))
         self.assertEqual(fake_left_child, h._parent(4))
 
-    # def test_parent_invalid(self):
-    #     """
-    #     Retrieving the parent value for an index without a parent is invalid.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertRaises(IndexError, h._parent, 0)
-    #     self.assertRaises(IndexError, h._parent, 1)
-    #     self.assertRaises(IndexError, h._parent, 2)
-    #     h._data.append('fake')
-    #     try:
-    #         h._parent(1)
-    #         h._parent(2)
-    #     except IndexError:
-    #         self.fail("Could not retrieve parent properly.")
-    #     for i in range(3, 9):
-    #         self.assertRaises(IndexError, h._parent, i)
+    def test_parent_invalid(self):
+        """
+        Retrieving the parent value for an index without a parent is invalid.
+        """
+        h = MaxHeap()
+        self.assertRaises(IndexError, h._parent, 0)
+        self.assertRaises(IndexError, h._parent, 1)
+        self.assertRaises(IndexError, h._parent, 2)
+        h._data.append('fake')
+        try:
+            h._parent(1)
+            h._parent(2)
+        except IndexError:
+            self.fail("Could not retrieve parent properly.")
+        for i in range(3, 9):
+            self.assertRaises(IndexError, h._parent, i)
 
     # def test_left_child_none(self):
     #     """
