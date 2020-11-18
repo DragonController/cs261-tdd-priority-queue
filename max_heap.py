@@ -52,11 +52,7 @@ class MaxHeap:
 
    def _greater_child_index(self, index):
       if self._has_left_child(index):
-         if self._has_right_child(index):
-            if self._left_child(index) >= self._right_child(index):
-               return self._left_child_index(index)
+         if self._has_right_child(index) and self._left_child(index) < self._right_child(index):
             return self._right_child_index(index)
          return self._left_child_index(index)
-      if self._has_right_child(index):
-         return self._right_child_index(index)
       return None
