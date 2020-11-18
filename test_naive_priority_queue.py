@@ -195,18 +195,18 @@ class TestNaivePriorityQueue(unittest.TestCase):
     Algorithmic complexity
     """
 
-    # def test_enqueue_efficiency(self):
-    #     """
-    #     Enqueing a value is always O(1).
-    #     """
-    #     time_samples = []
-    #     for _ in range(0, 1000):
-    #         pq = NaivePriorityQueue()
-    #         start_time = time.time()
-    #         pq.enqueue('fake')
-    #         end_time = time.time()
-    #         time_samples.append(end_time - start_time)
-    #     small_average_enqueue_time = sum(time_samples) / float(len(time_samples))
+    def test_enqueue_efficiency(self):
+        """
+        Enqueing a value is always O(1).
+        """
+        time_samples = []
+        for _ in range(0, 1000):
+            pq = NaivePriorityQueue()
+            start_time = time.time()
+            pq.enqueue('fake')
+            end_time = time.time()
+            time_samples.append(end_time - start_time)
+        small_average_enqueue_time = sum(time_samples) / float(len(time_samples))
 
     #     large_queue = NaivePriorityQueue()
     #     for _ in range(0, 1000000):
