@@ -49,3 +49,6 @@ class MaxHeap:
 
    def _has_right_child(self, index):
       return self._right_child(index) != None
+
+   def _greater_child_index(self, index):
+      return None
