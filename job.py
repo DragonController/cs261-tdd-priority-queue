@@ -4,4 +4,6 @@
 
 class Job:
 
-    pass
+    def __init__(self):
+        self.priority = None
+        self.message = None
