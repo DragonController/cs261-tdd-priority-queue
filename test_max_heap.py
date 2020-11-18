@@ -80,15 +80,15 @@ class TestMaxHeap(unittest.TestCase):
         h._data.append('fake')
         self.assertFalse(h._is_empty())
 
-    # def test_empty(self):
-    #     """
-    #     A heap with no items in its data list is empty.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     h._data.append('fake')
-    #     h._data = []
-    #     self.assertTrue(h._is_empty())
+    def test_empty(self):
+        """
+        A heap with no items in its data list is empty.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        h._data.append('fake')
+        h._data = []
+        self.assertTrue(h._is_empty())
 
     """
     Last index. The index of the last element in the heap.
