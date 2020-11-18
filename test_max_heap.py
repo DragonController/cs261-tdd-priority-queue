@@ -70,15 +70,15 @@ class TestMaxHeap(unittest.TestCase):
         h = MaxHeap()
         self.assertTrue(h._is_empty())
 
-    # def test_not_empty(self):
-    #     """
-    #     A heap is not empty if there are items in its data list.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     self.assertFalse(h._is_empty())
-    #     h._data.append('fake')
-    #     self.assertFalse(h._is_empty())
+    def test_not_empty(self):
+        """
+        A heap is not empty if there are items in its data list.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        self.assertFalse(h._is_empty())
+        h._data.append('fake')
+        self.assertFalse(h._is_empty())
 
     # def test_empty(self):
     #     """
