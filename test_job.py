@@ -103,17 +103,17 @@ class TestJob(unittest.TestCase):
     String representation. Might be handy later, but hopefully you won't need it.
     """
 
-    # def test_repr(self):
-    #     """
-    #     A job displays its priority and message when printed.
-    #     Hint: Investigate __repr__.
-    #     """
-    #     j = Job(42, "Fake message one")
-    #     self.assertEqual("Job 42: Fake message one", str(j))
-    #     self.assertEqual("Job 42: Fake message one", repr(j))
-    #     j = Job(76, "Fake message two")
-    #     self.assertEqual("Job 76: Fake message two", str(j))
-    #     self.assertEqual("Job 76: Fake message two", repr(j))
+    def test_repr(self):
+        """
+        A job displays its priority and message when printed.
+        Hint: Investigate __repr__.
+        """
+        j = Job(42, "Fake message one")
+        self.assertEqual("Job 42: Fake message one", str(j))
+        self.assertEqual("Job 42: Fake message one", repr(j))
+        j = Job(76, "Fake message two")
+        self.assertEqual("Job 76: Fake message two", str(j))
+        self.assertEqual("Job 76: Fake message two", repr(j))
 
 
 def fake_value():

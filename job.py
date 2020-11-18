@@ -32,3 +32,6 @@ class Job:
         if not isinstance(other, Job):
             return NotImplemented
         return self.priority >= other.priority
+
+    def __repr__(self):
+        return "Job " + str(self.priority) + ": " + self.message
