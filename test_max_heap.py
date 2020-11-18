@@ -122,14 +122,14 @@ class TestMaxHeap(unittest.TestCase):
         h._data.append('fake')
         self.assertEqual(1, h._last_index())
 
-    # def test_last_index_42(self):
-    #     """
-    #     The last index of a heap with forty-two elements is 41.
-    #     """
-    #     h = MaxHeap()
-    #     for _ in range(42):
-    #         h._data.append('fake')
-    #     self.assertEqual(41, h._last_index())
+    def test_last_index_42(self):
+        """
+        The last index of a heap with forty-two elements is 41.
+        """
+        h = MaxHeap()
+        for _ in range(42):
+            h._data.append('fake')
+        self.assertEqual(41, h._last_index())
 
     """
     Value at an index. It's handy to grab a value at a particular index, so lets
