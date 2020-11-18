@@ -336,29 +336,29 @@ class TestMaxHeap(unittest.TestCase):
         self.assertIsNone(h._right_child(3))
         self.assertIsNone(h._right_child(4))
 
-    # def test_right_child(self):
-    #     """
-    #     Given an index i, the right child is the value at the 'right child index'
-    #     of i.
-    #     Hint: The phrase above is nearly identical to the code, if you use your
-    #           abstractions.
-    #     """
-    #     h = MaxHeap()
-    #     fake_root = fake_value()
-    #     fake_left_child = fake_value()
-    #     fake_right_child = fake_value()
-    #     fake_left_left_child = fake_value()
-    #     fake_left_right_child = fake_value()
-    #     h._data.append(fake_root)
-    #     h._data.append(fake_left_child)
-    #     h._data.append(fake_right_child)
-    #     h._data.append(fake_left_left_child)
-    #     h._data.append(fake_left_right_child)
-    #     self.assertEqual(fake_right_child, h._right_child(0))
-    #     self.assertEqual(fake_left_right_child, h._right_child(1))
-    #     self.assertIsNone(h._right_child(2))
-    #     self.assertIsNone(h._right_child(3))
-    #     self.assertIsNone(h._right_child(4))
+    def test_right_child(self):
+        """
+        Given an index i, the right child is the value at the 'right child index'
+        of i.
+        Hint: The phrase above is nearly identical to the code, if you use your
+              abstractions.
+        """
+        h = MaxHeap()
+        fake_root = fake_value()
+        fake_left_child = fake_value()
+        fake_right_child = fake_value()
+        fake_left_left_child = fake_value()
+        fake_left_right_child = fake_value()
+        h._data.append(fake_root)
+        h._data.append(fake_left_child)
+        h._data.append(fake_right_child)
+        h._data.append(fake_left_left_child)
+        h._data.append(fake_left_right_child)
+        self.assertEqual(fake_right_child, h._right_child(0))
+        self.assertEqual(fake_left_right_child, h._right_child(1))
+        self.assertIsNone(h._right_child(2))
+        self.assertIsNone(h._right_child(3))
+        self.assertIsNone(h._right_child(4))
 
     """
     Left child and right child presence. These will be handy later.
