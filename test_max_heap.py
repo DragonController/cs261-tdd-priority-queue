@@ -96,13 +96,13 @@ class TestMaxHeap(unittest.TestCase):
     moves the last element to the root position. So this will be handy.
     """
 
-    # def test_last_index_initial(self):
-    #     """
-    #     The 'last index' of an empty heap happens to be -1.
-    #     Hint: Easy to calculate if you know its size.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertEqual(-1, h._last_index())
+    def test_last_index_initial(self):
+        """
+        The 'last index' of an empty heap happens to be -1.
+        Hint: Easy to calculate if you know its size.
+        """
+        h = MaxHeap()
+        self.assertEqual(-1, h._last_index())
 
     # def test_last_index_one(self):
     #     """
