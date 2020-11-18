@@ -31,4 +31,4 @@ class Job:
     def __ge__(self, other):
         if not isinstance(other, Job):
             return NotImplemented
-        return self.priority <= other.priority
+        return self.priority >= other.priority
