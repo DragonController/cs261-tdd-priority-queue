@@ -21,3 +21,6 @@ class MaxHeap:
 
    def _value_at(self, index):
       return self._data[index]
+
+   def _left_child_index(self, index):
+      return 2 * index + 1
