@@ -161,15 +161,15 @@ class TestMaxHeap(unittest.TestCase):
             h._data.append(value)
             self.assertEqual(value, h._value_at(i))
 
-    # def test_value_at_invalid_index(self):
-    #     """
-    #     _value_at raises an IndexError when the index is out of bounds.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertRaises(IndexError, h._value_at, 0)
-    #     h._data.append('fake')
-    #     self.assertRaises(IndexError, h._value_at, 1)
-    #     self.assertRaises(IndexError, h._value_at, 2)
+    def test_value_at_invalid_index(self):
+        """
+        _value_at raises an IndexError when the index is out of bounds.
+        """
+        h = MaxHeap()
+        self.assertRaises(IndexError, h._value_at, 0)
+        h._data.append('fake')
+        self.assertRaises(IndexError, h._value_at, 1)
+        self.assertRaises(IndexError, h._value_at, 2)
 
     """
     Indexes of left child, right child, and parent.
