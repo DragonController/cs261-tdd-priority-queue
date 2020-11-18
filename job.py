@@ -7,3 +7,8 @@ class Job:
     def __init__(self, priority = None, message = None):
         self.priority = priority
         self.message = message
+
+    def __eq__(self, other):
+        if not isinstance(other, Job):
+            return NotImplemented
+        return self.priority == other.priority
