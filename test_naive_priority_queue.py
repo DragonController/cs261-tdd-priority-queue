@@ -129,22 +129,22 @@ class TestNaivePriorityQueue(unittest.TestCase):
         self.assertEqual(middle_priority, pq.dequeue())
         self.assertEqual(lower_priority, pq.dequeue())
 
-    # def test_dequeue_three_internal(self):
-    #     """
-    #     Dequeuing from a three-element queue removes each dequeued value from
-    #     the internal list, highest-priority first.
-    #     """
-    #     pq = NaivePriorityQueue()
-    #     lower_priority = Job(1, 'top')
-    #     middle_priority = Job(3, 'of')
-    #     higher_priority = Job(5, 'this')
-    #     pq.enqueue(higher_priority)
-    #     pq.enqueue(lower_priority)
-    #     pq.enqueue(middle_priority)
-    #     _ = pq.dequeue()
-    #     self.assertEqual(lower_priority, pq.data[0])
-    #     _ = pq.dequeue()
-    #     self.assertEqual(lower_priority, pq.data[0])
+    def test_dequeue_three_internal(self):
+        """
+        Dequeuing from a three-element queue removes each dequeued value from
+        the internal list, highest-priority first.
+        """
+        pq = NaivePriorityQueue()
+        lower_priority = Job(1, 'top')
+        middle_priority = Job(3, 'of')
+        higher_priority = Job(5, 'this')
+        pq.enqueue(higher_priority)
+        pq.enqueue(lower_priority)
+        pq.enqueue(middle_priority)
+        _ = pq.dequeue()
+        self.assertEqual(lower_priority, pq.data[0])
+        _ = pq.dequeue()
+        self.assertEqual(lower_priority, pq.data[0])
 
     """
     Emptiness
