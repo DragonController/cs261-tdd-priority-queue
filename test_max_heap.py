@@ -104,14 +104,14 @@ class TestMaxHeap(unittest.TestCase):
         h = MaxHeap()
         self.assertEqual(-1, h._last_index())
 
-    # def test_last_index_one(self):
-    #     """
-    #     The last index of a heap with one element is 0.
-    #     Hint: Easy, if you know how to determine the last index of a list.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append('fake')
-    #     self.assertEqual(0, h._last_index())
+    def test_last_index_one(self):
+        """
+        The last index of a heap with one element is 0.
+        Hint: Easy, if you know how to determine the last index of a list.
+        """
+        h = MaxHeap()
+        h._data.append('fake')
+        self.assertEqual(0, h._last_index())
 
     # def test_last_index_two(self):
     #     """
