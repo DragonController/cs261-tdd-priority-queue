@@ -157,13 +157,13 @@ class TestNaivePriorityQueue(unittest.TestCase):
         pq = NaivePriorityQueue()
         self.assertTrue(pq.is_empty())
 
-    # def test_not_empty(self):
-    #     """
-    #     A queue with one enqueued value is not empty.
-    #     """
-    #     pq = NaivePriorityQueue()
-    #     pq.enqueue(Job(1, 'People'))
-    #     self.assertFalse(pq.is_empty())
+    def test_not_empty(self):
+        """
+        A queue with one enqueued value is not empty.
+        """
+        pq = NaivePriorityQueue()
+        pq.enqueue(Job(1, 'People'))
+        self.assertFalse(pq.is_empty())
 
     # def test_empty_after_dequeue(self):
     #     """
