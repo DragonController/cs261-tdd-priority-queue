@@ -62,13 +62,13 @@ class TestMaxHeap(unittest.TestCase):
     use elsewhere.
     """
 
-    # def test_empty_initial(self):
-    #     """
-    #     A new heap is empty.
-    #     Hint: _size is a convenient abstraction, and helps avoid repetitive code.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertTrue(h._is_empty())
+    def test_empty_initial(self):
+        """
+        A new heap is empty.
+        Hint: _size is a convenient abstraction, and helps avoid repetitive code.
+        """
+        h = MaxHeap()
+        self.assertTrue(h._is_empty())
 
     # def test_not_empty(self):
     #     """

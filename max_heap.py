@@ -12,3 +12,6 @@ class MaxHeap:
 
    def _size(self):
       return len(self._data)
+
+   def _is_empty(self):
+      return len(self._data) == 0
