@@ -11,6 +11,8 @@ class NaivePriorityQueue:
         self.data.append(value)
 
     def dequeue(self):
+        if self.is_empty():
+            return None
         element = self.data[0]
         for current_element in self.data:
             if current_element.priority > element.priority:
