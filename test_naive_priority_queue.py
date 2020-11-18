@@ -28,14 +28,14 @@ class TestNaivePriorityQueue(unittest.TestCase):
         pq = NaivePriorityQueue()
         self.assertEqual(list, type(pq.data))
 
-    # def test_enqueue_one_internal(self):
-    #     """
-    #     Enqueueing a value adds it to the internal list.
-    #     """
-    #     pq = NaivePriorityQueue()
-    #     j = Job(5, 'The')
-    #     pq.enqueue(j)
-    #     self.assertEqual(j, pq.data[0])
+    def test_enqueue_one_internal(self):
+        """
+        Enqueueing a value adds it to the internal list.
+        """
+        pq = NaivePriorityQueue()
+        j = Job(5, 'The')
+        pq.enqueue(j)
+        self.assertEqual(j, pq.data[0])
 
     # def test_enqueue_two_internal(self):
     #     """
