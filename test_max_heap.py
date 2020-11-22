@@ -612,31 +612,31 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(5, h._data[0])
         self.assertEqual(1, h._data[1])
 
-    # def test_sift_down_three_stable(self):
-    #     """
-    #     Sifting down an element in a three-element heap, when the element is larger
-    #     than its children, is easy.
-    #     Hint: Be naive for now.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(10)
-    #     h._data.append(5)
-    #     h._data.append(1)
-    #     # Sifting down the root of this tree doesn't change anything.
-    #     h._sift_down(0)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(5, h._data[1])
-    #     self.assertEqual(1, h._data[2])
-    #     # Sifting down the second element of this tree doesn't change anything.
-    #     h._sift_down(1)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(5, h._data[1])
-    #     self.assertEqual(1, h._data[2])
-    #     # Sifting down the third element of this tree doesn't change anything.
-    #     h._sift_down(2)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(5, h._data[1])
-    #     self.assertEqual(1, h._data[2])
+    def test_sift_down_three_stable(self):
+        """
+        Sifting down an element in a three-element heap, when the element is larger
+        than its children, is easy.
+        Hint: Be naive for now.
+        """
+        h = MaxHeap()
+        h._data.append(10)
+        h._data.append(5)
+        h._data.append(1)
+        # Sifting down the root of this tree doesn't change anything.
+        h._sift_down(0)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(5, h._data[1])
+        self.assertEqual(1, h._data[2])
+        # Sifting down the second element of this tree doesn't change anything.
+        h._sift_down(1)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(5, h._data[1])
+        self.assertEqual(1, h._data[2])
+        # Sifting down the third element of this tree doesn't change anything.
+        h._sift_down(2)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(5, h._data[1])
+        self.assertEqual(1, h._data[2])
 
     # def test_sift_down_two_unstable(self):
     #     """
