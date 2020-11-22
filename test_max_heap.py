@@ -584,15 +584,15 @@ class TestMaxHeap(unittest.TestCase):
     larger child.
     """
 
-    # def test_sift_down_one(self):
-    #     """
-    #     Sifting down the root of a single-element heap is easy.
-    #     Hint: Be naive for now.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(1)
-    #     h._sift_down(0)
-    #     self.assertEqual(1, h._data[0])
+    def test_sift_down_one(self):
+        """
+        Sifting down the root of a single-element heap is easy.
+        Hint: Be naive for now.
+        """
+        h = MaxHeap()
+        h._data.append(1)
+        h._sift_down(0)
+        self.assertEqual(1, h._data[0])
 
     # def test_sift_down_two_stable(self):
     #     """
