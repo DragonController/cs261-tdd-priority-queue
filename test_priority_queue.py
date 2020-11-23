@@ -126,19 +126,19 @@ class TestPriorityQueue(unittest.TestCase):
     Final test. Rawr!
     """
 
-    # def test_enqueue_dequeue_omg(self):
-    #     """
-    #     Dequeing from a big priority queue always returns the highest priority
-    #     item that was in the queue.
-    #     """
-    #     pq = PriorityQueue()
-    #     for _ in range(1000): # Add some zeroes for fun.
-    #         pq.enqueue(Job(random.randint(1, 1000), "Escuchela, la ciudad respirando"))
-    #     job = pq.dequeue()
-    #     while not pq.is_empty():
-    #         latest_job = pq.dequeue()
-    #         self.assertTrue(job >= latest_job)
-    #         job = latest_job
+    def test_enqueue_dequeue_omg(self):
+        """
+        Dequeing from a big priority queue always returns the highest priority
+        item that was in the queue.
+        """
+        pq = PriorityQueue()
+        for _ in range(1000): # Add some zeroes for fun.
+            pq.enqueue(Job(random.randint(1, 1000), "Escuchela, la ciudad respirando"))
+        job = pq.dequeue()
+        while not pq.is_empty():
+            latest_job = pq.dequeue()
+            self.assertTrue(job >= latest_job)
+            job = latest_job
 
 
 def fake_value():
