@@ -71,4 +71,5 @@ class MaxHeap:
       self._data[second_index] = temp
 
    def _sift_down(self, index):
-      return 0
+      if len(self._data) >= index + 2 and self._value_at(index) < self._value_at(index + 1):
+         self._swap(index, index + 1)
