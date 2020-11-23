@@ -115,12 +115,12 @@ class TestPriorityQueue(unittest.TestCase):
         _ = pq.dequeue()
         self.assertFalse(pq.is_empty())
 
-    # def test_initial_dequeue(self):
-    #     """
-    #     Dequeuing from an empty queue returns None.
-    #     """
-    #     pq = PriorityQueue()
-    #     self.assertIsNone(pq.dequeue())
+    def test_initial_dequeue(self):
+        """
+        Dequeuing from an empty queue returns None.
+        """
+        pq = PriorityQueue()
+        self.assertIsNone(pq.dequeue())
 
     """
     Final test. Rawr!
