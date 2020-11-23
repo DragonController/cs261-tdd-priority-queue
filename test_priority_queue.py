@@ -25,12 +25,12 @@ class TestPriorityQueue(unittest.TestCase):
         except NameError:
             self.fail("Could not instantiate PriorityQueue.")
 
-    # def test_internal(self):
-    #     """
-    #     A PriorityQueue uses a list to store its data.
-    #     """
-    #     pq = PriorityQueue()
-    #     self.assertEqual(MaxHeap, type(pq.heap))
+    def test_internal(self):
+        """
+        A PriorityQueue uses a list to store its data.
+        """
+        pq = PriorityQueue()
+        self.assertEqual(MaxHeap, type(pq.heap))
 
     """
     Enqueuing and dequeuing. A PriorityQueue is simple if you've got a binary heap.
