@@ -1157,15 +1157,15 @@ class TestMaxHeap(unittest.TestCase):
         h = MaxHeap()
         self.assertIsNone(h.delete())
 
-    # def test_delete_one(self):
-    #     """
-    #     Deleting when there is only one element removes that element
-    #     and returns it.
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     self.assertEqual(10, h.delete())
-    #     self.assertEqual(0, len(h._data))
+    def test_delete_one(self):
+        """
+        Deleting when there is only one element removes that element
+        and returns it.
+        """
+        h = MaxHeap()
+        h.insert(10)
+        self.assertEqual(10, h.delete())
+        self.assertEqual(0, len(h._data))
 
     # def test_delete_two(self):
     #     """
