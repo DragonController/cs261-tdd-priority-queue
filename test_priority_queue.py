@@ -96,14 +96,14 @@ class TestPriorityQueue(unittest.TestCase):
         pq.enqueue(Job(1, 'People'))
         self.assertFalse(pq.is_empty())
 
-    # def test_empty_after_dequeue(self):
-    #     """
-    #     A queue with one enqueued value is empty after dequeuing.
-    #     """
-    #     pq = PriorityQueue()
-    #     pq.enqueue(Job(1, 'was'))
-    #     _ = pq.dequeue()
-    #     self.assertTrue(pq.is_empty())
+    def test_empty_after_dequeue(self):
+        """
+        A queue with one enqueued value is empty after dequeuing.
+        """
+        pq = PriorityQueue()
+        pq.enqueue(Job(1, 'was'))
+        _ = pq.dequeue()
+        self.assertTrue(pq.is_empty())
 
     # def test_not_empty_multiple(self):
     #     """
