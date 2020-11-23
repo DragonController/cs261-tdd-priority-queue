@@ -953,21 +953,21 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(15, h._data[0])
         self.assertEqual(10, h._data[1])
 
-    # def test_insert_smaller_two(self):
-    #     """
-    #     An inserted value that is smaller than the root of a two-element MaxHeap
-    #     becomes the right child.
-    #       10           10
-    #      /      =>    /  \
-    #     5            5    1
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     h.insert(5)
-    #     h.insert(1)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(5, h._data[1])
-    #     self.assertEqual(1, h._data[2])
+    def test_insert_smaller_two(self):
+        """
+        An inserted value that is smaller than the root of a two-element MaxHeap
+        becomes the right child.
+          10           10
+         /      =>    /  \
+        5            5    1
+        """
+        h = MaxHeap()
+        h.insert(10)
+        h.insert(5)
+        h.insert(1)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(5, h._data[1])
+        self.assertEqual(1, h._data[2])
 
     # def test_insert_larger_two(self):
     #     """
