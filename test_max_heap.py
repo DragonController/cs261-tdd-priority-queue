@@ -1181,22 +1181,22 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(5, h.delete())
         self.assertEqual(0, len(h._data))
 
-    # def test_delete_larger_left_three(self):
-    #     """
-    #     Deleting when there are three elements in the heap removes the root element
-    #     and returns it, leaving the larger of the two children as the new root.
-    #       10            5
-    #      /  \    =>    /
-    #     5    1        1
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     h.insert(5)
-    #     h.insert(1)
-    #     self.assertEqual(10, h.delete())
-    #     self.assertEqual(2, len(h._data))
-    #     self.assertEqual(5, h._data[0])
-    #     self.assertEqual(1, h._data[1])
+    def test_delete_larger_left_three(self):
+        """
+        Deleting when there are three elements in the heap removes the root element
+        and returns it, leaving the larger of the two children as the new root.
+          10            5
+         /  \    =>    /
+        5    1        1
+        """
+        h = MaxHeap()
+        h.insert(10)
+        h.insert(5)
+        h.insert(1)
+        self.assertEqual(10, h.delete())
+        self.assertEqual(2, len(h._data))
+        self.assertEqual(5, h._data[0])
+        self.assertEqual(1, h._data[1])
 
     # def test_delete_larger_right_three(self):
     #     """
