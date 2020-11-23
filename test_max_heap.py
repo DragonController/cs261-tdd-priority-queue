@@ -1167,19 +1167,19 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(10, h.delete())
         self.assertEqual(0, len(h._data))
 
-    # def test_delete_two(self):
-    #     """
-    #     Deleting when there are two elements in the heap removes the root element
-    #     and returns it, leaving the other element in its place as the new root.
-    #     Hint: There's a version of the pop method that takes an argument.
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     h.insert(5)
-    #     self.assertEqual(10, h.delete())
-    #     self.assertEqual(1, len(h._data))
-    #     self.assertEqual(5, h.delete())
-    #     self.assertEqual(0, len(h._data))
+    def test_delete_two(self):
+        """
+        Deleting when there are two elements in the heap removes the root element
+        and returns it, leaving the other element in its place as the new root.
+        Hint: There's a version of the pop method that takes an argument.
+        """
+        h = MaxHeap()
+        h.insert(10)
+        h.insert(5)
+        self.assertEqual(10, h.delete())
+        self.assertEqual(1, len(h._data))
+        self.assertEqual(5, h.delete())
+        self.assertEqual(0, len(h._data))
 
     # def test_delete_larger_left_three(self):
     #     """
