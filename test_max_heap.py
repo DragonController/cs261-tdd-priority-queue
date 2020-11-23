@@ -750,15 +750,15 @@ class TestMaxHeap(unittest.TestCase):
     where it is less than its parent.
     """
 
-    # def test_sift_up_one(self):
-    #     """
-    #     Sifting up the root is easy.
-    #     Hint: Be naive for now.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(1)
-    #     h._sift_up(0)
-    #     self.assertEqual(1, h._data[0])
+    def test_sift_up_one(self):
+        """
+        Sifting up the root is easy.
+        Hint: Be naive for now.
+        """
+        h = MaxHeap()
+        h._data.append(1)
+        h._sift_up(0)
+        self.assertEqual(1, h._data[0])
 
     # def test_sift_up_two_stable(self):
     #     """

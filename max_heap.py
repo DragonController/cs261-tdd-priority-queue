@@ -75,3 +75,10 @@ class MaxHeap:
          new_index = self._greater_child_index(index)
          self._swap(index, new_index)
          self._sift_down(new_index)
+
+
+   def _sift_up(self, index):
+      if index > 0 and self._value_at(index) > self._parent:
+         new_index = self._parent_index(index)
+         self._swap(index, new_index)
+         self._sift_up(new_index)
