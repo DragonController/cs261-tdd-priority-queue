@@ -818,20 +818,20 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(5, h._data[0])
         self.assertEqual(1, h._data[1])
 
-    # def test_sift_up_three_unstable_left(self):
-    #     """
-    #     Sifting up an element in a three-element heap, when the element is
-    #     larger than its parent, swaps it with its parent.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(1)
-    #     h._data.append(10)
-    #     h._data.append(5)
-    #     # Sifting up the left leaf of this tree swaps it with its parent.
-    #     h._sift_up(1)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(1, h._data[1])
-    #     self.assertEqual(5, h._data[2])
+    def test_sift_up_three_unstable_left(self):
+        """
+        Sifting up an element in a three-element heap, when the element is
+        larger than its parent, swaps it with its parent.
+        """
+        h = MaxHeap()
+        h._data.append(1)
+        h._data.append(10)
+        h._data.append(5)
+        # Sifting up the left leaf of this tree swaps it with its parent.
+        h._sift_up(1)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(1, h._data[1])
+        self.assertEqual(5, h._data[2])
 
     # def test_sift_up_three_unstable_right(self):
     #     """
