@@ -687,31 +687,31 @@ class TestMaxHeap(unittest.TestCase):
     # But, in a larger heap, an element may need to be sifted down further than
     # one level. Time to be recursive.
 
-    # def test_sift_down_left(self):
-    #     """
-    #     Sifting down an element swaps it with the larger of its two children,
-    #     and continues to sift down that element in its new position and its new
-    #     children, until it is in a position where it obeys the heap property.
-    #     Hint: This might only require one more line of code, if expressed recursively.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(2)
-    #     h._data.append(10)
-    #     h._data.append(9)
-    #     h._data.append(5)
-    #     h._data.append(4)
-    #     h._data.append(7)
-    #     h._data.append(6)
-    #     h._data.append(1)
-    #     h._sift_down(0)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(5, h._data[1])
-    #     self.assertEqual(9, h._data[2])
-    #     self.assertEqual(2, h._data[3])
-    #     self.assertEqual(4, h._data[4])
-    #     self.assertEqual(7, h._data[5])
-    #     self.assertEqual(6, h._data[6])
-    #     self.assertEqual(1, h._data[7])
+    def test_sift_down_left(self):
+        """
+        Sifting down an element swaps it with the larger of its two children,
+        and continues to sift down that element in its new position and its new
+        children, until it is in a position where it obeys the heap property.
+        Hint: This might only require one more line of code, if expressed recursively.
+        """
+        h = MaxHeap()
+        h._data.append(2)
+        h._data.append(10)
+        h._data.append(9)
+        h._data.append(5)
+        h._data.append(4)
+        h._data.append(7)
+        h._data.append(6)
+        h._data.append(1)
+        h._sift_down(0)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(5, h._data[1])
+        self.assertEqual(9, h._data[2])
+        self.assertEqual(2, h._data[3])
+        self.assertEqual(4, h._data[4])
+        self.assertEqual(7, h._data[5])
+        self.assertEqual(6, h._data[6])
+        self.assertEqual(1, h._data[7])
 
     # def test_sift_down(self):
     #     """

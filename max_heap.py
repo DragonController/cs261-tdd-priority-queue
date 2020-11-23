@@ -72,4 +72,6 @@ class MaxHeap:
 
    def _sift_down(self, index):
       if self._has_left_child(index) and self._value_at(index) < self._value_at(self._greater_child_index(index)):
-         self._swap(index, self._greater_child_index(index))
+         new_index = self._greater_child_index(index)
+         self._swap(index, new_index)
+         self._sift_down(new_index)
