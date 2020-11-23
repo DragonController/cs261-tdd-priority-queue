@@ -1150,12 +1150,12 @@ class TestMaxHeap(unittest.TestCase):
     Hint 2: Don't forget to return the root.
     """
 
-    # def test_delete_empty(self):
-    #     """
-    #     Deleting from an empty MaxHeap returns None.
-    #     """
-    #     h = MaxHeap()
-    #     self.assertIsNone(h.delete())
+    def test_delete_empty(self):
+        """
+        Deleting from an empty MaxHeap returns None.
+        """
+        h = MaxHeap()
+        self.assertIsNone(h.delete())
 
     # def test_delete_one(self):
     #     """

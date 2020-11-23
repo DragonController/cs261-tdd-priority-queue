@@ -86,3 +86,8 @@ class MaxHeap:
    def insert(self, value):
       self._data.append(value)
       self._sift_up(self._size() - 1)
+
+   def delete(self):
+      if self._size() > 0:
+         return self._data.pop()
+      return None
