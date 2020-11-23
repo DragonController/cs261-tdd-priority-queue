@@ -969,23 +969,23 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(5, h._data[1])
         self.assertEqual(1, h._data[2])
 
-    # def test_insert_larger_two(self):
-    #     """
-    #     An inserted value that is larger than the root becomes the new root, and
-    #     the old root becomes the last element in the tree.
-    #       10           15
-    #      /      =>    /  \
-    #     5            5    10
-    #     Hint: Remember, insertion is just two steps. Append the new leaf to the
-    #     end, and sift that new leaf up.
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     h.insert(5)
-    #     h.insert(15)
-    #     self.assertEqual(15, h._data[0])
-    #     self.assertEqual(5, h._data[1])
-    #     self.assertEqual(10, h._data[2])
+    def test_insert_larger_two(self):
+        """
+        An inserted value that is larger than the root becomes the new root, and
+        the old root becomes the last element in the tree.
+          10           15
+         /      =>    /  \
+        5            5    10
+        Hint: Remember, insertion is just two steps. Append the new leaf to the
+        end, and sift that new leaf up.
+        """
+        h = MaxHeap()
+        h.insert(10)
+        h.insert(5)
+        h.insert(15)
+        self.assertEqual(15, h._data[0])
+        self.assertEqual(5, h._data[1])
+        self.assertEqual(10, h._data[2])
 
     # def test_insert_stable(self):
     #     """
