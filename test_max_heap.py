@@ -924,13 +924,13 @@ class TestMaxHeap(unittest.TestCase):
     Hint: Two steps. Add the new value, and sift up. That's it.
     """
 
-    # def test_insert_empty(self):
-    #     """
-    #     An empty MaxHeap stores a new value as the root. No algorithms necessary.
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     self.assertEqual(10, h._data[0])
+    def test_insert_empty(self):
+        """
+        An empty MaxHeap stores a new value as the root. No algorithms necessary.
+        """
+        h = MaxHeap()
+        h.insert(10)
+        self.assertEqual(10, h._data[0])
 
     # def test_insert_smaller_one(self):
     #     """

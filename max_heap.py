@@ -82,3 +82,6 @@ class MaxHeap:
          new_index = self._parent_index(index)
          self._swap(index, new_index)
          self._sift_up(new_index)
+
+   def insert(self, value):
+      self._data.append(value)
