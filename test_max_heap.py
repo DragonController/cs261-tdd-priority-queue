@@ -884,36 +884,36 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(1, h._data[9])
         self.assertEqual(6, h._data[10])
 
-    # def test_sift_up(self):
-    #     """
-    #     Sifting up an element swaps it with its parent when appropriate, and
-    #     continues to sift up that element from its new position, until it either
-    #     becomes the root or its parent's value is larger than its value.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(600)
-    #     h._data.append(500)
-    #     h._data.append(8)
-    #     h._data.append(7)
-    #     h._data.append(6)
-    #     h._data.append(5)
-    #     h._data.append(4)
-    #     h._data.append(3)
-    #     h._data.append(2)
-    #     h._data.append(1)
-    #     h._data.append(42)
-    #     h._sift_up(10)
-    #     self.assertEqual(600, h._data[0])
-    #     self.assertEqual(500, h._data[1])
-    #     self.assertEqual(8, h._data[2])
-    #     self.assertEqual(7, h._data[3])
-    #     self.assertEqual(42, h._data[4])
-    #     self.assertEqual(5, h._data[5])
-    #     self.assertEqual(4, h._data[6])
-    #     self.assertEqual(3, h._data[7])
-    #     self.assertEqual(2, h._data[8])
-    #     self.assertEqual(1, h._data[9])
-    #     self.assertEqual(6, h._data[10])
+    def test_sift_up(self):
+        """
+        Sifting up an element swaps it with its parent when appropriate, and
+        continues to sift up that element from its new position, until it either
+        becomes the root or its parent's value is larger than its value.
+        """
+        h = MaxHeap()
+        h._data.append(600)
+        h._data.append(500)
+        h._data.append(8)
+        h._data.append(7)
+        h._data.append(6)
+        h._data.append(5)
+        h._data.append(4)
+        h._data.append(3)
+        h._data.append(2)
+        h._data.append(1)
+        h._data.append(42)
+        h._sift_up(10)
+        self.assertEqual(600, h._data[0])
+        self.assertEqual(500, h._data[1])
+        self.assertEqual(8, h._data[2])
+        self.assertEqual(7, h._data[3])
+        self.assertEqual(42, h._data[4])
+        self.assertEqual(5, h._data[5])
+        self.assertEqual(4, h._data[6])
+        self.assertEqual(3, h._data[7])
+        self.assertEqual(2, h._data[8])
+        self.assertEqual(1, h._data[9])
+        self.assertEqual(6, h._data[10])
 
     """
     Inserting a value. It's easy now.
