@@ -89,5 +89,7 @@ class MaxHeap:
 
    def delete(self):
       if self._size() > 0:
-         return self._data.pop(0)
+         value = self._data.pop(0)
+         self._sift_down(0)
+         return value
       return None
