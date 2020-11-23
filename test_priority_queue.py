@@ -61,21 +61,21 @@ class TestPriorityQueue(unittest.TestCase):
         pq.enqueue(higher_priority)
         self.assertEqual(higher_priority, pq.dequeue())
 
-    # def test_enqueue_dequeue_three(self):
-    #     """
-    #     Dequeuing from a three-element queue returns the jobs with the highest
-    #     priority.
-    #     """
-    #     pq = PriorityQueue()
-    #     lower_priority = Job(1, 'like')
-    #     middle_priority = Job(3, 'who')
-    #     higher_priority = Job(5, 'on')
-    #     pq.enqueue(higher_priority)
-    #     pq.enqueue(lower_priority)
-    #     pq.enqueue(middle_priority)
-    #     self.assertEqual(higher_priority, pq.dequeue())
-    #     self.assertEqual(middle_priority, pq.dequeue())
-    #     self.assertEqual(lower_priority, pq.dequeue())
+    def test_enqueue_dequeue_three(self):
+        """
+        Dequeuing from a three-element queue returns the jobs with the highest
+        priority.
+        """
+        pq = PriorityQueue()
+        lower_priority = Job(1, 'like')
+        middle_priority = Job(3, 'who')
+        higher_priority = Job(5, 'on')
+        pq.enqueue(higher_priority)
+        pq.enqueue(lower_priority)
+        pq.enqueue(middle_priority)
+        self.assertEqual(higher_priority, pq.dequeue())
+        self.assertEqual(middle_priority, pq.dequeue())
+        self.assertEqual(lower_priority, pq.dequeue())
 
     """
     Emptiness
