@@ -1125,18 +1125,18 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(2, h._data[5])
         self.assertEqual(4, h._data[6])
 
-    # def test_insert_omg(self):
-    #     """
-    #     Lots of inserts should result in the MaxHeap obeying the max-heap
-    #     property at every node in the tree.
-    #     """
-    #     h = MaxHeap()
-    #     for _ in range(100):
-    #         h.insert(random.randint(1, 1000))
-    #     for i in reversed(range(len(h._data))):
-    #         if (i - 1) // 2 < 0:
-    #             break
-    #         self.assertTrue(h._data[i] <= h._data[(i - 1) // 2])
+    def test_insert_omg(self):
+        """
+        Lots of inserts should result in the MaxHeap obeying the max-heap
+        property at every node in the tree.
+        """
+        h = MaxHeap()
+        for _ in range(100):
+            h.insert(random.randint(1, 1000))
+        for i in reversed(range(len(h._data))):
+            if (i - 1) // 2 < 0:
+                break
+            self.assertTrue(h._data[i] <= h._data[(i - 1) // 2])
 
     """
     Deleting a value. Straightforward, but with a couple base cases.
