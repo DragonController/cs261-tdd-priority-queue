@@ -987,31 +987,31 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(5, h._data[1])
         self.assertEqual(10, h._data[2])
 
-    # def test_insert_stable(self):
-    #     """
-    #     An inserted value that is smaller than its parent will remain in the new
-    #     leaf position.
-    #       10            10
-    #      /  \   =>    /    \
-    #     8    4       8      4
-    #                 / \    / \
-    #                3   4  1   2
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     h.insert(8)
-    #     h.insert(4)
-    #     h.insert(3)
-    #     h.insert(4)
-    #     h.insert(1)
-    #     h.insert(2)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(8, h._data[1])
-    #     self.assertEqual(4, h._data[2])
-    #     self.assertEqual(3, h._data[3])
-    #     self.assertEqual(4, h._data[4])
-    #     self.assertEqual(1, h._data[5])
-    #     self.assertEqual(2, h._data[6])
+    def test_insert_stable(self):
+        """
+        An inserted value that is smaller than its parent will remain in the new
+        leaf position.
+          10            10
+         /  \   =>    /    \
+        8    4       8      4
+                    / \    / \
+                   3   4  1   2
+        """
+        h = MaxHeap()
+        h.insert(10)
+        h.insert(8)
+        h.insert(4)
+        h.insert(3)
+        h.insert(4)
+        h.insert(1)
+        h.insert(2)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(8, h._data[1])
+        self.assertEqual(4, h._data[2])
+        self.assertEqual(3, h._data[3])
+        self.assertEqual(4, h._data[4])
+        self.assertEqual(1, h._data[5])
+        self.assertEqual(2, h._data[6])
 
     # def test_insert_unstable_three(self):
     #     """
