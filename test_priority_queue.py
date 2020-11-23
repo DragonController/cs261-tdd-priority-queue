@@ -46,20 +46,20 @@ class TestPriorityQueue(unittest.TestCase):
         self.assertEqual(j, pq.dequeue())
 
 
-    # def test_enqueue_dequeue_two(self):
-    #     """
-    #     Dequeuing from a two-element queue returns the one with highest priority.
-    #     """
-    #     pq = PriorityQueue()
-    #     lower_priority = Job(1, 'of')
-    #     higher_priority = Job(3, 'the')
-    #     pq.enqueue(higher_priority)
-    #     pq.enqueue(lower_priority)
-    #     self.assertEqual(higher_priority, pq.dequeue())
-    #     pq = PriorityQueue()
-    #     pq.enqueue(lower_priority)
-    #     pq.enqueue(higher_priority)
-    #     self.assertEqual(higher_priority, pq.dequeue())
+    def test_enqueue_dequeue_two(self):
+        """
+        Dequeuing from a two-element queue returns the one with highest priority.
+        """
+        pq = PriorityQueue()
+        lower_priority = Job(1, 'of')
+        higher_priority = Job(3, 'the')
+        pq.enqueue(higher_priority)
+        pq.enqueue(lower_priority)
+        self.assertEqual(higher_priority, pq.dequeue())
+        pq = PriorityQueue()
+        pq.enqueue(lower_priority)
+        pq.enqueue(higher_priority)
+        self.assertEqual(higher_priority, pq.dequeue())
 
     # def test_enqueue_dequeue_three(self):
     #     """
