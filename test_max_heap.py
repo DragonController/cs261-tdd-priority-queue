@@ -1258,30 +1258,30 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(5, h._data[1])
         self.assertEqual(2, h._data[2])
 
-    # def test_delete_larger_left_five(self):
-    #     """
-    #     Deleting when there are five elements in the heap removes the root element
-    #     and returns it, leaving the larger of the two children as the new root.
-    #     The leaf that was made the new root sifts down only as far as it needs to,
-    #     to obey the heap property.
-    #         10            8
-    #        /  \    =>    /  \
-    #       8    5        4    5
-    #      / \           /
-    #     2   4         2
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     h.insert(8)
-    #     h.insert(5)
-    #     h.insert(2)
-    #     h.insert(4)
-    #     self.assertEqual(10, h.delete())
-    #     self.assertEqual(4, len(h._data))
-    #     self.assertEqual(8, h._data[0])
-    #     self.assertEqual(4, h._data[1])
-    #     self.assertEqual(5, h._data[2])
-    #     self.assertEqual(2, h._data[3])
+    def test_delete_larger_left_five(self):
+        """
+        Deleting when there are five elements in the heap removes the root element
+        and returns it, leaving the larger of the two children as the new root.
+        The leaf that was made the new root sifts down only as far as it needs to,
+        to obey the heap property.
+            10            8
+           /  \    =>    /  \
+          8    5        4    5
+         / \           /
+        2   4         2
+        """
+        h = MaxHeap()
+        h.insert(10)
+        h.insert(8)
+        h.insert(5)
+        h.insert(2)
+        h.insert(4)
+        self.assertEqual(10, h.delete())
+        self.assertEqual(4, len(h._data))
+        self.assertEqual(8, h._data[0])
+        self.assertEqual(4, h._data[1])
+        self.assertEqual(5, h._data[2])
+        self.assertEqual(2, h._data[3])
 
     # def test_delete_larger_left_five_root(self):
     #     """
