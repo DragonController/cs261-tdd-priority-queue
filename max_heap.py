@@ -94,12 +94,5 @@ class MaxHeap:
             self._data.insert(0, self._value_at(self._size() - 1))
             self._sift_down(0)
             self._data.pop()
-         #if self._size() > 1 and self._value_at(0) < self._value_at(1):
-         #   self._swap(0, 1)
-         #   self._sift_down(2)
-         #else:
-         #   if self._size() > 2:
-         #      self._swap(1, 2)
-         #      self._sift_down(1)
          return value
       return None
