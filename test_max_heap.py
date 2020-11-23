@@ -1053,27 +1053,27 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(4, h._data[2])
         self.assertEqual(8, h._data[3])
 
-    # def test_insert_unstable_four(self):
-    #     """
-    #     An inserted value that is larger than its parent should sift up until
-    #     the heap property is obeyed.
-    #         10              10
-    #        /  \   =>      /    \
-    #       8    4         9      4
-    #      /              / \
-    #     1              1   8
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     h.insert(8)
-    #     h.insert(4)
-    #     h.insert(1)
-    #     h.insert(9)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(9, h._data[1])
-    #     self.assertEqual(4, h._data[2])
-    #     self.assertEqual(1, h._data[3])
-    #     self.assertEqual(8, h._data[4])
+    def test_insert_unstable_four(self):
+        """
+        An inserted value that is larger than its parent should sift up until
+        the heap property is obeyed.
+            10              10
+           /  \   =>      /    \
+          8    4         9      4
+         /              / \
+        1              1   8
+        """
+        h = MaxHeap()
+        h.insert(10)
+        h.insert(8)
+        h.insert(4)
+        h.insert(1)
+        h.insert(9)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(9, h._data[1])
+        self.assertEqual(4, h._data[2])
+        self.assertEqual(1, h._data[3])
+        self.assertEqual(8, h._data[4])
 
     # def test_insert_unstable_root_five(self):
     #     """
