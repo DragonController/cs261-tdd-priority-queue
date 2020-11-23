@@ -36,14 +36,14 @@ class TestPriorityQueue(unittest.TestCase):
     Enqueuing and dequeuing. A PriorityQueue is simple if you've got a binary heap.
     """
 
-    # def test_enqueue_dequeue_one(self):
-    #     """
-    #     Enqueueing a single value is immediately dequeable.
-    #     """
-    #     pq = PriorityQueue()
-    #     j = Job(5, 'The')
-    #     pq.enqueue(j)
-    #     self.assertEqual(j, pq.dequeue())
+    def test_enqueue_dequeue_one(self):
+        """
+        Enqueueing a single value is immediately dequeable.
+        """
+        pq = PriorityQueue()
+        j = Job(5, 'The')
+        pq.enqueue(j)
+        self.assertEqual(j, pq.dequeue())
 
 
     # def test_enqueue_dequeue_two(self):

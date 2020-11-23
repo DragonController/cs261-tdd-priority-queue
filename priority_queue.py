@@ -10,3 +10,9 @@ class PriorityQueue:
 
     def __init__(self):
         self.heap = MaxHeap()
+
+    def enqueue(self, value):
+        self.heap.insert(value)
+
+    def dequeue(self):
+        return self.heap.delete()
