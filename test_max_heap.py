@@ -668,21 +668,21 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(1, h._data[1])
         self.assertEqual(5, h._data[2])
 
-    # def test_sift_down_three_unstable_right(self):
-    #     """
-    #     Sifting down an element in a three-element heap, swaps it with the larger
-    #     of its two children.
-    #     Hint: Review your handy helper methods. And use them.
-    #     """
-    #     h = MaxHeap()
-    #     h._data.append(1)
-    #     h._data.append(5)
-    #     h._data.append(10)
-    #     # Sifting down the root of this tree swaps it with its right child.
-    #     h._sift_down(0)
-    #     self.assertEqual(10, h._data[0])
-    #     self.assertEqual(5, h._data[1])
-    #     self.assertEqual(1, h._data[2])
+    def test_sift_down_three_unstable_right(self):
+        """
+        Sifting down an element in a three-element heap, swaps it with the larger
+        of its two children.
+        Hint: Review your handy helper methods. And use them.
+        """
+        h = MaxHeap()
+        h._data.append(1)
+        h._data.append(5)
+        h._data.append(10)
+        # Sifting down the root of this tree swaps it with its right child.
+        h._sift_down(0)
+        self.assertEqual(10, h._data[0])
+        self.assertEqual(5, h._data[1])
+        self.assertEqual(1, h._data[2])
 
     # But, in a larger heap, an element may need to be sifted down further than
     # one level. Time to be recursive.
