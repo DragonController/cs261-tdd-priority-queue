@@ -90,6 +90,10 @@ class MaxHeap:
    def delete(self):
       if self._size() > 0:
          value = self._data.pop(0)
-         self._sift_down(0)
+         if self._size() > 1 and self._value_at(0) < self._value_at(1):
+            self._swap(0, 1)
+         else:
+            if self._size() > 2:
+               self._swap(1, 2)
          return value
       return None

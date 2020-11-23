@@ -1216,26 +1216,26 @@ class TestMaxHeap(unittest.TestCase):
         self.assertEqual(5, h._data[0])
         self.assertEqual(1, h._data[1])
 
-    # def test_delete_larger_left_four(self):
-    #     """
-    #     Deleting when there are four elements in the heap removes the root element
-    #     and returns it, leaving the larger of the two children as the new root.
-    #         10            8
-    #        /  \    =>    /  \
-    #       8    5        2    5
-    #      /
-    #     2
-    #     """
-    #     h = MaxHeap()
-    #     h.insert(10)
-    #     h.insert(8)
-    #     h.insert(5)
-    #     h.insert(2)
-    #     self.assertEqual(10, h.delete())
-    #     self.assertEqual(3, len(h._data))
-    #     self.assertEqual(8, h._data[0])
-    #     self.assertEqual(2, h._data[1])
-    #     self.assertEqual(5, h._data[2])
+    def test_delete_larger_left_four(self):
+        """
+        Deleting when there are four elements in the heap removes the root element
+        and returns it, leaving the larger of the two children as the new root.
+            10            8
+           /  \    =>    /  \
+          8    5        2    5
+         /
+        2
+        """
+        h = MaxHeap()
+        h.insert(10)
+        h.insert(8)
+        h.insert(5)
+        h.insert(2)
+        self.assertEqual(10, h.delete())
+        self.assertEqual(3, len(h._data))
+        self.assertEqual(8, h._data[0])
+        self.assertEqual(2, h._data[1])
+        self.assertEqual(5, h._data[2])
 
     # def test_delete_larger_right_four(self):
     #     """
